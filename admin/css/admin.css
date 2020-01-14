@@ -1,0 +1,27 @@
+/**
+ * PLUGIN_PREFIX_UPPER Admin CSS
+ *
+ * @package PLUGIN-NICENAME
+ * @subpackage PLUGIN_PREFIX_UPPER_Admin_Core
+ * @since 1.0
+ */
+
+.PLUGIN_PREFIX_LOWER-row {
+	display: flex;
+	clear: left;
+	min-height: 18px;
+	margin-bottom: 18px;
+}
+
+.PLUGIN_PREFIX_LOWER-row > div {
+	float: left;
+}
+
+.PLUGIN_PREFIX_LOWER-row-first-cell {
+	width: 20%;
+	min-width: 90px;
+}
+
+.PLUGIN_PREFIX_LOWER-row > input {
+	float: left;
+}
