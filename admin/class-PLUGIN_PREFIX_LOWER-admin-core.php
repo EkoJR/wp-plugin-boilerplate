@@ -141,7 +141,9 @@ class PLUGIN_PREFIX_UPPER_Admin_Core {
 				'default' => 2,
 			);
 			add_screen_option( 'layout_columns', $screen_args );
-			do_action( 'add_meta_boxes', $hook_suffix );
+
+			global $post_type;
+			do_action( 'add_meta_boxes', $hook_suffix, $post_type );
 		}
 	}
 	
