@@ -17,8 +17,9 @@ class PLUGIN_PREFIX_UPPER_Core {
 		require_once PLUGIN_PREFIX_UPPER_DIR . 'includes/functions.php';
 		require_once PLUGIN_PREFIX_UPPER_DIR . 'includes/template.php';
 
-
-		require_once PLUGIN_PREFIX_UPPER_DIR . 'admin/class-PLUGIN_PREFIX_LOWER-admin-core.php';
+		if ( current_user_can( 'administrator' ) ) {
+			require_once PLUGIN_PREFIX_UPPER_DIR . 'admin/class-PLUGIN_PREFIX_LOWER-admin-core.php';
+		}
 	}
 
 	/**
@@ -31,7 +32,7 @@ class PLUGIN_PREFIX_UPPER_Core {
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'action_enqueue_scripts') );
 
-		if ( is_admin() ) {
+		if ( current_user_can( 'administrator' ) ) {
 			add_action( 'init', array( 'PLUGIN_PREFIX_UPPER_Admin_Core', 'get_instance' ) );
 		}
 	}
