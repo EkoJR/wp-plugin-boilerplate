@@ -8,8 +8,6 @@ class PLUGIN_PREFIX_UPPER_Core {
 	 * @since 1.0.0
 	 */
 	public function __construct() {
-		$this->_requires();
-
 		add_action( 'plugins_loaded', array( $this, 'action_init' ), 3 );
 	}
 
@@ -28,6 +26,8 @@ class PLUGIN_PREFIX_UPPER_Core {
 	 * @since 1.0.0
 	 */
 	public function action_init() {
+		$this->_requires();
+
 		add_action( 'plugins_loaded', array( $this, 'action_load_plugin_textdomain' ) );
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'action_enqueue_scripts') );
