@@ -105,6 +105,20 @@ if (
 		 */
 		define( 'PLUGIN_PREFIX_UPPER_URL', plugin_dir_url( $plugin_dir ) );
 	}
+
+	if ( ! defined( 'PLUGIN_PREFIX_UPPER_LOG_FILEPATH' ) ) {
+
+		/**
+		 * Plugin's Log Filepath.
+		 *
+		 * Used with PHP's `error_log()`.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @var string $PLUGIN_PREFIX_UPPER_LOG_FILEPATH Plugin's URL location.
+		 */
+		define( 'PLUGIN_PREFIX_UPPER_LOG_FILEPATH', WP_CONTENT_DIR . '/debug-PLUGIN-NICENAME.log' );
+	}
 }
 
 // Initialize Plugin (Single instance).
