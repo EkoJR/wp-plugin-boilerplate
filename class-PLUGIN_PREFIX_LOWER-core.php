@@ -1,5 +1,17 @@
 <?php
+/**
+ * Initial/Core operations with WP.
+ *
+ * May contain public operations.
+ *
+ * @package PLUGIN-NICENAME
+ */
 
+/**
+ * Class PLUGIN_PREFIX_UPPER_Core
+ *
+ * @since 1.0.0
+ */
 class PLUGIN_PREFIX_UPPER_Core {
 
 	/**
@@ -11,6 +23,13 @@ class PLUGIN_PREFIX_UPPER_Core {
 		add_action( 'plugins_loaded', array( $this, 'action_init' ), 3 );
 	}
 
+	/**
+	 * Required files.
+	 *
+	 * Adds files via include/require_once.
+	 *
+	 * @since 1.0.0
+	 */
 	private function _requires() {
 		require_once PLUGIN_PREFIX_UPPER_DIR . 'includes/functions.php';
 		require_once PLUGIN_PREFIX_UPPER_DIR . 'includes/template.php';
